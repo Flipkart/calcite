@@ -27,13 +27,27 @@ limitations under the License.
   <groupId>org.apache.calcite</groupId>
   <artifactId>calcite</artifactId>
   <packaging>pom</packaging>
-  <version>1.10.0</version>
+  <version>1.10.0.fk.1</version>
 
   <!-- More project information. -->
   <name>Calcite</name>
   <description>Calcite is a dynamic data management framework</description>
   <url>http://calcite.apache.org</url>
   <inceptionYear>2012</inceptionYear>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>fk-art-snapshot</id>
+      <name>libs-snapshot</name>
+      <url>http://10.85.59.116/artifactory/v1.0/artifacts/libs-snapshots-local</url>
+    </snapshotRepository>
+    <repository>
+      <id>fk-art-release</id>
+      <name>libs-rel</name>
+      <url>http://10.85.59.116/artifactory/v1.0/artifacts/libs-release-local</url>
+    </repository>
+  </distributionManagement>
+
 
   <mailingLists>
     <mailingList>
