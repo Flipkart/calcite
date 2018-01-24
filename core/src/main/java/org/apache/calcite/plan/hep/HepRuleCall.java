@@ -54,8 +54,12 @@ public class HepRuleCall extends RelOptRuleCall {
   // implement RelOptRuleCall
   public void transformTo(RelNode rel, Map<RelNode, RelNode> equiv) {
     final RelNode rel0 = rels[0];
-    RelOptUtil.verifyTypeEquivalence(rel0, rel, rel0);
-    results.add(rel);
+    try {
+      RelOptUtil.verifyTypeEquivalence(rel0, rel, rel0);
+      results.add(rel);
+    } catch (Throwable t) {
+      System.err.println(t);
+    }
   }
 
   List<RelNode> getResults() {
